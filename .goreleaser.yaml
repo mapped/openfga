@@ -29,19 +29,19 @@ dockers:
     dockerfile: Dockerfile.goreleaser
 
     image_templates:
-      - "openfga/openfga:latest"
-      - "openfga/openfga:{{ .Tag }}"
-      - "openfga/openfga:v{{ .Version }}"
-      - "openfga/openfga:v{{ .Major }}"
-      - "openfga/openfga:v{{ .Major }}.{{ .Minor }}"
-      - "openfga/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
+      - "mapped/openfga:latest"
+      - "mapped/openfga:{{ .Tag }}"
+      - "mapped/openfga:v{{ .Version }}"
+      - "mapped/openfga:v{{ .Major }}"
+      - "mapped/openfga:v{{ .Major }}.{{ .Minor }}"
+      - "mapped/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
 
     extra_files:
       - assets
 
 release:
   github:
-    owner: openfga
+    owner: mapped
     name: openfga
 
 archives:
